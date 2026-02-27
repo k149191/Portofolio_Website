@@ -75,7 +75,7 @@ Website ini merupakan portfolio pribadi Khairunisa Aprilia yang menampilkan info
 
 # C. Penjelasan Code
   ## 1. Section Navigaation Bar
-HTML:
+  HTML:
   ```
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3">
@@ -95,15 +95,17 @@ HTML:
 </nav>
 ```
 
-Penjelasan: 
-- Tag <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3"> digunakan untuk membuat navigation bar yang responsif menggunakan Bootstrap. Navbar akan melebar di layar besar dan dapat collapse di layar kecil.
-- Elemen <div class="container position-relative"> berfungsi sebagai pembungkus agar isi navbar terpusat dan rapi.
-- Bagian logo menggunakan <a class="navbar-brand logo-circle">K.a</a> sebagai identitas website. Class logo-circle nanti mengubah tampilannya menjadi lingkaran.
-- Menu navigasi dibuat dengan <ul class="navbar-nav flex-row gap-5 fw-semibold nav-center"> sehingga item menu tersusun horizontal, memiliki jarak antar menu, dan tampak lebih tegas.
-- Setiap item menu menggunakan <a class="nav-link" href="#..."> untuk membuat anchor link ke section Home, About Me, dan Certificate.
-- Tombol <button class="navbar-toggler menu-circle"> berfungsi sebagai hamburger menu pada tampilan mobile, yang akan membuka atau menutup menu saat layar kecil.
+  Penjelasan: 
+```
+•	Tag <nav class='navbar navbar-expand-lg navbar-dark custom-navbar py-3'> digunakan untuk membuat navigation bar responsif dengan Bootstrap. Navbar akan melebar di layar besar dan collapse di layar kecil.
+•	Elemen <div class='container position-relative'> berfungsi sebagai pembungkus agar isi navbar terpusat dan rapi.
+•	Tag <a class='navbar-brand logo-circle'>K.a</a> menampilkan logo website. Class logo-circle digunakan untuk membuat logo berbentuk lingkaran.
+•	Menu navigasi menggunakan <ul class='navbar-nav flex-row gap-5 fw-semibold nav-center'> sehingga item menu tersusun horizontal, memiliki jarak antar menu, dan teks terlihat lebih tegas.
+•	Setiap <a class='nav-link' href='#home'>, <a href='#about'>, dan <a href='#certificate'> berfungsi sebagai anchor link untuk berpindah ke section terkait.
+•	Tombol <button class='menu-circle navbar-toggler'> digunakan sebagai hamburger menu pada tampilan mobile untuk membuka dan menutup menu.
+```
 
-CSS:
+  CSS:
 ```
 .custom-navbar {
   background: #2b0b6f;
@@ -145,29 +147,273 @@ CSS:
 ```
 
   Penjelasan:
-  - <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3"> digunakan untuk membuat navigation bar responsif dengan Bootstrap. Navbar akan melebar di layar besar dan bisa collapse di layar kecil.
-  - <div class="container position-relative"> berfungsi sebagai pembungkus agar isi navbar berada di tengah dan rapi.
-  - <a class="navbar-brand logo-circle">K.a</a> menampilkan logo/brand website. Class logo-circle digunakan untuk membuat tampilan logo berbentuk lingkaran.
-  - <ul class="navbar-nav flex-row gap-5 fw-semibold nav-center"> menyusun menu secara horizontal, memberi jarak antar menu, dan membuat teks lebih tegas.
-  - Setiap <a class="nav-link" href="#..."> berfungsi sebagai anchor link untuk berpindah ke section Home, About Me, dan Certificate.
-  - <button class="navbar-toggler menu-circle"> adalah tombol hamburger yang muncul di layar kecil untuk membuka dan menutup menu.
+```
+•	Class .custom-navbar mengatur warna background navbar menjadi ungu gelap dan menambahkan garis bawah sebagai aksen.
+•	Class .nav-center .nav-link mengatur warna teks menu menjadi putih, menggunakan font Playfair Display, dan memperbesar ukuran teks.
+•	Selector .nav-center .nav-link:hover memberikan efek transparansi saat kursor diarahkan ke menu agar terlihat interaktif.
+•	Class .logo-circle membuat logo berbentuk lingkaran dengan ukuran tetap serta posisi teks berada di tengah.
+•	Class .menu-circle membuat tombol hamburger berbentuk lingkaran agar konsisten dengan desain.
+•	Selector .menu-circle .navbar-toggler-icon menggunakan filter invert untuk membalik warna ikon hamburger agar tetap terlihat jelas.
+```
 
   ## 2. Section Home
 
+  HTML:
   ```
-kode
-```
-  
-  ## 3. Section About Me
+<!--Homw-->
+<section id="home" class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 text-center text-lg-start">
+        <h1 class="fw-bold">Hello, I’m Kai</h1>
+        <p class="subtitle">A Information System Student in Mulawarman University.</p>
+        <div class="contact">
+          <p class="mb-1">📞 089693416561</p>
+          <p>✉️ khaiairilia@gmail.com</p>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+      <div class="profile-wrapper">
+        <img src="K:\Semester_4\PBW\portofolio_website\material\PDH KAI - NO BG.png" alt="profile" class="profile-img">
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+  ```
+  Penjelasan:
+  ```
+•	Tag <section id='home' class='hero-section'> merupakan hero section sebagai tampilan pembuka.
+•	Grid Bootstrap (row dan col-lg-6) membagi layout menjadi dua kolom antara teks dan gambar.
+•	Judul dan subtitle menampilkan perkenalan singkat pengguna.
+•	Class profile-wrapper membungkus foto agar tampil dalam frame lingkaran.
 
   ```
-kode
+  CSS:
+  ```
+.hero-section {
+  padding: 80px 0;
+}
+
+.subtitle {
+  color: #555;
+}
+
+.profile-wrapper {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  margin: auto;
+  border-radius: 50%;
+  background: #dcdce2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.profile-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: #cfcfd6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-img {
+  position: relative;
+  width: 300px;
+  height: auto;       
+  object-fit: contain; 
+  z-index: 2;
+}
+
+  ```
+  Penjelasan:
+  ```
+•	Class .hero-section memberi jarak vertikal pada hero.
+•	Class .profile-wrapper dan .profile-img mengatur tampilan foto profil agar berada dalam frame lingkaran.
+  ```
+
+  ## 3. Section About Me
+
+  HTML:
+  ```
+<!--About Me-->
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-card mx-auto text-center">
+      <p>
+        My name is Khairunisa Aprilia, an Information Systems student at Mulawarman
+        University. I am currently focusing on developing my skills in web development,
+        data visualization, and database design through academic and personal projects.
+        I enjoy learning step by step and turning ideas into structured and useful digital
+        solutions. I am continuously improving both my technical and writing skills as I
+        grow in the technology field.
+      </p>
+    </div>
+
+    <h3 class="text-center mt-5 mb-4">My Learning Journey</h3>
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <label>Indonesian Language - Native</label>
+        <div class="progress">
+          <div class="progress-bar" style="width:92%"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label>English - Beginner</label>
+        <div class="progress">
+          <div class="progress-bar" style="width:40%"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label>Canva</label>
+        <div class="progress">
+          <div class="progress-bar" style="width:97%"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label>Figma</label>
+        <div class="progress">
+          <div class="progress-bar" style="width:40%"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label>Affinity</label>
+        <div class="progress">
+          <div class="progress-bar" style="width:50%"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label>HTML</label>
+        <div class="progress">
+          <div class="progress-bar" style="width:20%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+```
+  Penjelasan:
+  ```
+•	Tag <section id='about' class='about-section'> digunakan untuk bagian profil dan skill.
+•	Class about-card menampilkan deskripsi diri dalam bentuk card.
+•	Judul My Learning Journey memperkenalkan bagian skill.
+•	Komponen progress dan progress-bar digunakan untuk menampilkan persentase kemampuan.
+
+```
+  CSS:
+  ```
+.about-section {
+  background: #e9e9ed;
+  padding: 70px 0;
+}
+
+.about-card {
+  background: #2b0b6f;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 800px;
+}
+
+.progress {
+  height: 10px;
+  background-color: #cfcfd6;
+}
+
+.progress-bar {
+  background: #2b0b6f;
+}
+```
+  Penjelasan:
+  ```
+•	Class .about-section dan .about-card mengatur tampilan section About.
+•	Class .progress dan .progress-bar mengatur tampilan bar kemampuan.
 ```
   
   ## 4. Section My Certificate
 
+HTML:
   ```
-kode
+<!--Certificate-->
+<section id="certificate" class="certificate-section">
+  <div class="container">
+    <h2 class="text-center mb-5">My Certificate</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="cert-card">
+          <img src="K:\Semester_4\PBW\portofolio_website\material\INFORSA.png" alt="certificate" class="cert-img img-fluid">
+          <h6>Information System Association</h6>
+          <small>30 December 2025</small>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="cert-card">
+          <img src="K:\Semester_4\PBW\portofolio_website\material\MAKRAB TAROT.png" alt="certificate" class="cert-img img-fluid">
+          <h6>Malam Keakraban</h6>
+          <small>13 December 2024</small>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="cert-card">
+          <img src="K:\Semester_4\PBW\portofolio_website\material\PUBDIG.png" alt="certificate" class="cert-img img-fluid">
+          <h6>Public Digital</h6>
+          <small>13 September 2025</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+Penjelasan:
+  ```
+•	Tag <section id='certificate' class='certificate-section'> menampilkan daftar sertifikat.
+•	Grid Bootstrap digunakan agar card sertifikat responsive.
+•	Class cert-card membungkus setiap sertifikat.
+•	Class cert-img mengatur tampilan gambar sertifikat agar rapi.
+
+```
+
+CSS:
+  ```
+.certificate-section {
+  padding: 80px 0;
+}
+
+.cert-card {
+  background: #e5e5e5;
+  padding: 20px;
+  border-radius: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cert-img {
+  width: 100%;
+  aspect-ratio: 1.414 / 1;   
+  object-fit: contain;   
+  background: #f3f3f7;
+  border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 14px;
+}
+```
+
+Penjelasan:
+  ```
+•	Class .certificate-section, .cert-card, dan .cert-img mengatur layout dan tampilan sertifikat.
 ```
 
 # D. Teknologi Yang Digunakan
+Teknologi yang digunakan untuk membuat website portofolio ini adalah:
+1. HTML
+2. CSS
+3. Bootstrap
