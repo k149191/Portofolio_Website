@@ -95,6 +95,14 @@ HTML:
 </nav>
 ```
 
+Penjelasan: 
+- Tag <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3"> digunakan untuk membuat navigation bar yang responsif menggunakan Bootstrap. Navbar akan melebar di layar besar dan dapat collapse di layar kecil.
+- Elemen <div class="container position-relative"> berfungsi sebagai pembungkus agar isi navbar terpusat dan rapi.
+- Bagian logo menggunakan <a class="navbar-brand logo-circle">K.a</a> sebagai identitas website. Class logo-circle nanti mengubah tampilannya menjadi lingkaran.
+- Menu navigasi dibuat dengan <ul class="navbar-nav flex-row gap-5 fw-semibold nav-center"> sehingga item menu tersusun horizontal, memiliki jarak antar menu, dan tampak lebih tegas.
+- Setiap item menu menggunakan <a class="nav-link" href="#..."> untuk membuat anchor link ke section Home, About Me, dan Certificate.
+- Tombol <button class="navbar-toggler menu-circle"> berfungsi sebagai hamburger menu pada tampilan mobile, yang akan membuka atau menutup menu saat layar kecil.
+
 CSS:
 ```
 .custom-navbar {
