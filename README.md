@@ -95,7 +95,7 @@ HTML:
 </nav>
 ```
 
-CSS
+CSS:
 ```
 .custom-navbar {
   background: #2b0b6f;
@@ -136,12 +136,16 @@ CSS
 }
 ```
 
-  Kode di atas merupakan implementasi Navigation Bar menggunakan Bootstrap 5 yang berfungsi sebagai menu navigasi utama pada website. Elemen <nav> dengan class navbar navbar-expand-lg navbar-dark custom-navbar py-3 digunakan untuk membuat navbar yang responsif, di mana menu akan tampil penuh pada layar besar dan dapat collapse pada layar kecil. Di dalam navbar terdapat logo “K.a” yang diberi class logo-circle sehingga tampil berbentuk lingkaran sebagai identitas website.
+  Penjelasan:
+  - Kode <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3"> digunakan untuk membuat navigation bar yang responsif menggunakan Bootstrap 5. Navbar akan tampil penuh di layar besar dan collapse di layar kecil.
+  - Bagian logo menggunakan <a class="navbar-brand logo-circle"> yang menampilkan teks “K.a” sebagai identitas website. Class logo-circle pada CSS membuat logo berbentuk lingkaran.
+  - Menu navigasi dibuat dengan <ul class="navbar-nav flex-row gap-5 fw-semibold nav-center"> yang berfungsi menyusun menu secara horizontal, memberi jarak antar menu, serta membuat teks menu lebih tebal.
+  - Setiap menu (Home, About Me, Certificate) menggunakan anchor link (#home, #about, #certificate) sehingga pengguna dapat berpindah ke section terkait dengan cepat.
+  - Tombol hamburger dengan class navbar-toggler dan menu-circle digunakan untuk tampilan mobile agar menu dapat dibuka dan ditutup pada layar kecil.
+  - Pada CSS, class .custom-navbar mengatur warna background navbar menjadi ungu gelap dan menambahkan garis bawah sebagai aksen.
+  - Class .nav-center .nav-link mengatur warna teks menu menjadi putih, font lebih elegan, serta ukuran lebih besar, sedangkan efek hover dibuat lebih transparan agar terlihat interaktif.
+  - Class .logo-circle dan .menu-circle digunakan untuk membuat logo dan tombol hamburger berbentuk lingkaran sehingga tampilan navbar terlihat lebih modern dan konsisten.
 
-Menu navigasi disusun menggunakan <ul class="navbar-nav flex-row gap-5 fw-semibold nav-center"> yang membuat item menu tersusun horizontal, memiliki jarak antar menu, dan tampilan font yang lebih tegas. Setiap menu menggunakan anchor link (#home, #about, #certificate) untuk memudahkan pengguna berpindah ke section terkait secara cepat. Selain itu, terdapat tombol hamburger dengan class navbar-toggler dan menu-circle yang berfungsi menampilkan menu versi mobile.
-
-Pada bagian CSS, class .custom-navbar mengatur warna latar navbar menjadi ungu gelap dan menambahkan garis bawah sebagai aksen visual. Class .nav-center .nav-link mengatur warna teks menu menjadi putih, font lebih elegan, serta ukuran lebih besar, sedangkan efek hover dibuat sedikit transparan agar interaktif. Class .logo-circle dan .menu-circle digunakan untuk membuat logo dan tombol hamburger berbentuk lingkaran sehingga tampilan navbar terlihat lebih modern dan konsisten.
-  
   ## 2. Section Home
 
   ```
