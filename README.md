@@ -75,8 +75,89 @@ Website ini merupakan portfolio pribadi Khairunisa Aprilia yang menampilkan info
 
 # C. Penjelasan Code
   ## 1. Section Navigaation Bar
+HTML:
+  ```
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3">
+  <div class="container position-relative">
+    <a class="navbar-brand logo-circle" href="K:\Semester_4\PBW\portofolio_website\material\K.png">K.a</a>
+    <div class="mx-auto d-none d-lg-block">
+      <ul class="navbar-nav flex-row gap-5 fw-semibold nav-center">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificate">Certificate</a></li>
+      </ul>
+    </div>
+    <button class="menu-circle navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMobile">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+```
+
+CSS
+```
+.custom-navbar {
+  background: #2b0b6f;
+  border-bottom: 4px solid #d9d9d9;
+}
+
+.nav-center .nav-link {
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+}
+
+.nav-center .nav-link:hover {
+  opacity: 0.8;
+}
+
+.logo-circle {
+  background: #ffffff;
+  color: #000;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.menu-circle {
+  background: #ffffff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.menu-circle .navbar-toggler-icon {
+  filter: invert(1);
+}
+```
+
+  Kode di atas merupakan implementasi Navigation Bar menggunakan Bootstrap 5 yang berfungsi sebagai menu navigasi utama pada website. Elemen <nav> dengan class navbar navbar-expand-lg navbar-dark custom-navbar py-3 digunakan untuk membuat navbar yang responsif, di mana menu akan tampil penuh pada layar besar dan dapat collapse pada layar kecil. Di dalam navbar terdapat logo “K.a” yang diberi class logo-circle sehingga tampil berbentuk lingkaran sebagai identitas website.
+
+Menu navigasi disusun menggunakan <ul class="navbar-nav flex-row gap-5 fw-semibold nav-center"> yang membuat item menu tersusun horizontal, memiliki jarak antar menu, dan tampilan font yang lebih tegas. Setiap menu menggunakan anchor link (#home, #about, #certificate) untuk memudahkan pengguna berpindah ke section terkait secara cepat. Selain itu, terdapat tombol hamburger dengan class navbar-toggler dan menu-circle yang berfungsi menampilkan menu versi mobile.
+
+Pada bagian CSS, class .custom-navbar mengatur warna latar navbar menjadi ungu gelap dan menambahkan garis bawah sebagai aksen visual. Class .nav-center .nav-link mengatur warna teks menu menjadi putih, font lebih elegan, serta ukuran lebih besar, sedangkan efek hover dibuat sedikit transparan agar interaktif. Class .logo-circle dan .menu-circle digunakan untuk membuat logo dan tombol hamburger berbentuk lingkaran sehingga tampilan navbar terlihat lebih modern dan konsisten.
+  
   ## 2. Section Home
+
+  ```
+kode
+```
+  
   ## 3. Section About Me
+
+  ```
+kode
+```
+  
   ## 4. Section My Certificate
+
+  ```
+kode
+```
 
 # D. Teknologi Yang Digunakan
