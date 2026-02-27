@@ -145,14 +145,12 @@ CSS:
 ```
 
   Penjelasan:
-  - Kode <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3"> digunakan untuk membuat navigation bar yang responsif menggunakan Bootstrap 5. Navbar akan tampil penuh di layar besar dan collapse di layar kecil.
-  - Bagian logo menggunakan <a class="navbar-brand logo-circle"> yang menampilkan teks “K.a” sebagai identitas website. Class logo-circle pada CSS membuat logo berbentuk lingkaran.
-  - Menu navigasi dibuat dengan <ul class="navbar-nav flex-row gap-5 fw-semibold nav-center"> yang berfungsi menyusun menu secara horizontal, memberi jarak antar menu, serta membuat teks menu lebih tebal.
-  - Setiap menu (Home, About Me, Certificate) menggunakan anchor link (#home, #about, #certificate) sehingga pengguna dapat berpindah ke section terkait dengan cepat.
-  - Tombol hamburger dengan class navbar-toggler dan menu-circle digunakan untuk tampilan mobile agar menu dapat dibuka dan ditutup pada layar kecil.
-  - Pada CSS, class .custom-navbar mengatur warna background navbar menjadi ungu gelap dan menambahkan garis bawah sebagai aksen.
-  - Class .nav-center .nav-link mengatur warna teks menu menjadi putih, font lebih elegan, serta ukuran lebih besar, sedangkan efek hover dibuat lebih transparan agar terlihat interaktif.
-  - Class .logo-circle dan .menu-circle digunakan untuk membuat logo dan tombol hamburger berbentuk lingkaran sehingga tampilan navbar terlihat lebih modern dan konsisten.
+  - <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3"> digunakan untuk membuat navigation bar responsif dengan Bootstrap. Navbar akan melebar di layar besar dan bisa collapse di layar kecil.
+  - <div class="container position-relative"> berfungsi sebagai pembungkus agar isi navbar berada di tengah dan rapi.
+  - <a class="navbar-brand logo-circle">K.a</a> menampilkan logo/brand website. Class logo-circle digunakan untuk membuat tampilan logo berbentuk lingkaran.
+  - <ul class="navbar-nav flex-row gap-5 fw-semibold nav-center"> menyusun menu secara horizontal, memberi jarak antar menu, dan membuat teks lebih tegas.
+  - Setiap <a class="nav-link" href="#..."> berfungsi sebagai anchor link untuk berpindah ke section Home, About Me, dan Certificate.
+  - <button class="navbar-toggler menu-circle"> adalah tombol hamburger yang muncul di layar kecil untuk membuka dan menutup menu.
 
   ## 2. Section Home
 
