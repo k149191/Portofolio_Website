@@ -414,8 +414,8 @@ Penjelasan:
 
 # D. Teknologi Yang Digunakan
 Teknologi yang digunakan untuk membuat website portofolio ini adalah:
-1. HTML
-2. CSS
+1. HTML5
+2. CSS3
 3. Bootstrap
 
 <p align="center">
